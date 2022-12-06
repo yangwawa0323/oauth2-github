@@ -1,0 +1,4 @@
+github:
+  app_name: <YOUR-APP-NAME>
+  client_id: <YOUR-GITHUB-CLIENT-ID>
+  client_secret: <YOUR-GITHUB-CLIENT-SECRET>
