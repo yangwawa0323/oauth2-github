@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github user info</title>
+    <style>
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+            height: 100vh;
+        }
+        div.content {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            
+        }
+        .github-user {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .github-user .github-user-name span {
+            font-size: 48px;
+            color: lightslategray;
+            font-weight: 600;
+        }
+
+        .github-user .github-user-avatar img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid darkslateblue;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: blue;
+            font-weight: 500;
+            line-height: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        
+        <div class="github-user">
+
+            <h2 class="github-user-name">
+                <p>Welcome
+                <p>
+                    <span>{{.user.Login}} </span>
+            </h2>
+            <p class="github-user-avatar">
+                <img src="{{.user.Avatar}}" />
+            </p>
+        </div>
+        <div class="repo-list">
+            <ul>
+                {{range .repolist}}
+                <li>
+                    <a href="{{.HtmlURL}}">
+                        {{.Name}}
+                    </a>
+                </li>
+                {{end }}
+                    
+            </ul>
+                
+        </div>
+    </div>
+</body>
+
+</html>
