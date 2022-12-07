@@ -2,3 +2,8 @@ github:
   app_name: <YOUR-APP-NAME>
   client_id: <YOUR-GITHUB-CLIENT-ID>
   client_secret: <YOUR-GITHUB-CLIENT-SECRET>
+
+# use the absolute path name. and chmod 0600
+certs:
+  cert_file: <YOUR-CERTIFICATION>  
+  cert_key: <YOUR-PRIVATE_KEY>
